@@ -1,8 +1,6 @@
 #include "main.h"
-
 /**
  * print_alphabet_x10 - print alphabets 10 times
- * Return: always 0
  */
 void pint_alphabet_x10(void)
 {
@@ -15,5 +13,4 @@ void pint_alphabet_x10(void)
 			_putchar(le);
 		_putchar('\n');
 	}
-	return (0)
 }
