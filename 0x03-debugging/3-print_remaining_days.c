@@ -1,5 +1,6 @@
 #include "main.h"
 #include <stdio.h>
+#include <stdlib.h>
 
 /**
  * print_remaining_days - task a date and prints how many days are
@@ -10,7 +11,7 @@
  * Return: void
  */
 
-void print_remaining_days (int month, int day, int year)
+void print_remaining_days(int month, int day, int year)
 {
 	if ((year % 100 == 0 && year % 400 == 0) || (year % 4 == 0))
 	{
@@ -31,8 +32,6 @@ void print_remaining_days (int month, int day, int year)
 		{
 			printf("Day of the year: %d\n", day);
 			printf("Remaining days: %d\n", 365 - day);
-			return (void);
 		}
 	}
 }
-
