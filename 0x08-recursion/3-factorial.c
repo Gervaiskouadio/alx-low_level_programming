@@ -1,7 +1,8 @@
 #include "main.h"
+#include <stdio.h>
 
 /**
- * factoriol - retuns factorial of a given number.
+ * factorial - retuns factorial of a given number.
  * @n: input
  * Return: factorial of number
  * -1 if n < 0.
