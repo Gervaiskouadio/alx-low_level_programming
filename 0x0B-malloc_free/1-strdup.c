@@ -1,62 +1,33 @@
+#include <stdlib.h>
 #include "main.h"
 
 /**
- * _strlen - count array
- * @s: array of elements
- * Return: 1
+ * *_strdup - copies the string given as parameter
+ * @str: string to duplicate
+ *
+ * Return: pointer to the copied string (Success), NULL (Error)
  */
-int_strlen(char *s)
+char *_strdup(char *str)
 {
-	unsigned int i;
+	char *duplicate;
+	unsigned int i, len;
 
 	i = 0;
-	while (s[i] != '\0') /*count character of string*/
-	{
-		i++;
-	}
-	return (1);
-}
+	len = 0;
 
-/**
- * _strcpy - copy arrays
- * @src: array of elements
- * @dest: dest array
- * Return: dest
- */
-char *_strcpy(char *dest, char *src)
-{
-	int i = 0;
-
-	while (src[i] != '\0')
-	{
-		dest[i] = src[i];
-		i++;
-	}
-	dest[i] = '\0';
-	return (dest);
-}
-
-/**
- * *_strdup - array for prints a string
- * @str: array of elements
- * @Return: dst
- */
-char _strdup(char *str)
-{
-	char *dst;
-	unsigned int size;
-
-	if (str == 0)
-	{
+	if (str == NULL)
 		return (NULL);
-	}
-	size = _strlen(str) + 1;
-	dst = (char *) malloc(size * sizeof(char));
 
-	if (dst == 0)
-	{
+	while (str[len])
+		len++;
+	duplicate = malloc(sizeof(char) * (len + 1));
+
+	if (duplicate == NULL)
 		return (NULL);
-	}
-	_strcpy(dst, str);
-	return (dst);
+
+	while ((duplicate[i] = str[i]) != '\0')
+		i++;
+
+	return (duplicate);
 }
+
